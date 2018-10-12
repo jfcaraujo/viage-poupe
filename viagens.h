@@ -1,4 +1,4 @@
-#ifndef _VIAGENS_H
+/*#ifndef _VIAGENS_H
 #define _VIAGENS_H
 
 #include "comboios.h"
@@ -13,4 +13,4 @@ class Viagem{ // partida, destino, comboio associado, distancia, preco base: dad
 
 };
 
-#endif
+#endif*/

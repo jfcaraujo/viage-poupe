@@ -1,4 +1,4 @@
-#ifndef _COMBOIOS_H
+/*#ifndef _COMBOIOS_H
 #define _COMBOIOS_H
 
 #include <string>
@@ -40,3 +40,4 @@ public:
 
 
 #endif
+*/
