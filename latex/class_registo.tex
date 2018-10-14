@@ -9,9 +9,15 @@
 \item 
 \mbox{\hyperlink{class_registo_a1dca6558d473be328a35cc844dccbbc4}{Registo}} (\mbox{\hyperlink{class_cartao}{Cartao}} $\ast$c, std\+::string \mbox{\hyperlink{class_registo_a5f387f6835765cfebc7c292c8ca152dd}{nome}}, std\+::string \mbox{\hyperlink{class_registo_aff4608d0155c0e50fbe8d2db6bdc8ec2}{profissao}}, \mbox{\hyperlink{structdatas}{datas}} datanasc)
 \item 
-void \mbox{\hyperlink{class_registo_a3d4ce2f7e25614391d1bbe2750fafaaf}{alterar\+Cartao}} (\mbox{\hyperlink{class_cartao}{Cartao}} $\ast$c)
+std\+::string \mbox{\hyperlink{class_registo_a7302a5c59866e8e008b1bb1e47511b94}{get\+Nome}} () const
 \item 
-std\+::string \mbox{\hyperlink{class_registo_ac9b651f188464cbc0cb7846d48e2914b}{get\+Informacao}} ()
+std\+::string \mbox{\hyperlink{class_registo_a218c39c55b2e8f6d546dd3ff45687f6f}{get\+Profissao}} () const
+\item 
+\mbox{\hyperlink{structdatas}{datas}} \mbox{\hyperlink{class_registo_ac1fca826ae5de2a5a1c32694ea196657}{get\+Datanascimento}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_registo_ab060c606736697ff17be7504019adf3f}{get\+Informacao}} () const
+\item 
+void \mbox{\hyperlink{class_registo_a3d4ce2f7e25614391d1bbe2750fafaaf}{alterar\+Cartao}} (\mbox{\hyperlink{class_cartao}{Cartao}} $\ast$c)
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -33,6 +39,11 @@ std\+::string \mbox{\hyperlink{class_registo_aff4608d0155c0e50fbe8d2db6bdc8ec2}{
 \subsubsection{\texorpdfstring{Registo()}{Registo()}}
 {\footnotesize\ttfamily Registo\+::\+Registo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cartao}{Cartao}} $\ast$}]{c,  }\item[{std\+::string}]{nome,  }\item[{std\+::string}]{profissao,  }\item[{\mbox{\hyperlink{structdatas}{datas}}}]{datanasc }\end{DoxyParamCaption})}
 
+Construtor\+: ~\newline
+$\ast$c -\/$>$ Objeto da class \mbox{\hyperlink{class_cartao}{Cartao}}, tipo de subscricao ~\newline
+nome -\/$>$ Nome do passageiro ~\newline
+profissao -\/$>$ Profissao do passageiro ~\newline
+datanasc -\/$>$ struct (int dia, int mes, int ano), recebe a data de nascimento ~\newline
 
 
 \subsection{Member Function Documentation}
@@ -42,13 +53,32 @@ std\+::string \mbox{\hyperlink{class_registo_aff4608d0155c0e50fbe8d2db6bdc8ec2}{
 \subsubsection{\texorpdfstring{alterar\+Cartao()}{alterarCartao()}}
 {\footnotesize\ttfamily void Registo\+::alterar\+Cartao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cartao}{Cartao}} $\ast$}]{c }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_registo_ac9b651f188464cbc0cb7846d48e2914b}\label{class_registo_ac9b651f188464cbc0cb7846d48e2914b}} 
+Altera o tipo de subscricao do passageiro ~\newline
+$\ast$c -\/$>$ Objeto da class \mbox{\hyperlink{class_cartao}{Cartao}}, tipo de subscricao para qual alterar \mbox{\Hypertarget{class_registo_ac1fca826ae5de2a5a1c32694ea196657}\label{class_registo_ac1fca826ae5de2a5a1c32694ea196657}} 
+\index{Registo@{Registo}!get\+Datanascimento@{get\+Datanascimento}}
+\index{get\+Datanascimento@{get\+Datanascimento}!Registo@{Registo}}
+\subsubsection{\texorpdfstring{get\+Datanascimento()}{getDatanascimento()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdatas}{datas}} Registo\+::get\+Datanascimento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna a data de nascimento do passageiro \mbox{\Hypertarget{class_registo_ab060c606736697ff17be7504019adf3f}\label{class_registo_ab060c606736697ff17be7504019adf3f}} 
 \index{Registo@{Registo}!get\+Informacao@{get\+Informacao}}
 \index{get\+Informacao@{get\+Informacao}!Registo@{Registo}}
 \subsubsection{\texorpdfstring{get\+Informacao()}{getInformacao()}}
-{\footnotesize\ttfamily std\+::string Registo\+::get\+Informacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily string Registo\+::get\+Informacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+Retorna toda a informacao do passageiro \mbox{\Hypertarget{class_registo_a7302a5c59866e8e008b1bb1e47511b94}\label{class_registo_a7302a5c59866e8e008b1bb1e47511b94}} 
+\index{Registo@{Registo}!get\+Nome@{get\+Nome}}
+\index{get\+Nome@{get\+Nome}!Registo@{Registo}}
+\subsubsection{\texorpdfstring{get\+Nome()}{getNome()}}
+{\footnotesize\ttfamily string Registo\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+Retorna o nome do passageiro \mbox{\Hypertarget{class_registo_a218c39c55b2e8f6d546dd3ff45687f6f}\label{class_registo_a218c39c55b2e8f6d546dd3ff45687f6f}} 
+\index{Registo@{Registo}!get\+Profissao@{get\+Profissao}}
+\index{get\+Profissao@{get\+Profissao}!Registo@{Registo}}
+\subsubsection{\texorpdfstring{get\+Profissao()}{getProfissao()}}
+{\footnotesize\ttfamily string Registo\+::get\+Profissao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna a profissao do passageiro 
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_registo_a081486fcc65a8696797eae018b89ab59}\label{class_registo_a081486fcc65a8696797eae018b89ab59}} 

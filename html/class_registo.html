@@ -77,10 +77,16 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1dca6558d473be328a35cc844dccbbc4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_registo.html#a1dca6558d473be328a35cc844dccbbc4">Registo</a> (<a class="el" href="class_cartao.html">Cartao</a> *c, std::string <a class="el" href="class_registo.html#a5f387f6835765cfebc7c292c8ca152dd">nome</a>, std::string <a class="el" href="class_registo.html#aff4608d0155c0e50fbe8d2db6bdc8ec2">profissao</a>, <a class="el" href="structdatas.html">datas</a> datanasc)</td></tr>
 <tr class="separator:a1dca6558d473be328a35cc844dccbbc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7302a5c59866e8e008b1bb1e47511b94"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_registo.html#a7302a5c59866e8e008b1bb1e47511b94">getNome</a> () const</td></tr>
+<tr class="separator:a7302a5c59866e8e008b1bb1e47511b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a218c39c55b2e8f6d546dd3ff45687f6f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_registo.html#a218c39c55b2e8f6d546dd3ff45687f6f">getProfissao</a> () const</td></tr>
+<tr class="separator:a218c39c55b2e8f6d546dd3ff45687f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1fca826ae5de2a5a1c32694ea196657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdatas.html">datas</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_registo.html#ac1fca826ae5de2a5a1c32694ea196657">getDatanascimento</a> () const</td></tr>
+<tr class="separator:ac1fca826ae5de2a5a1c32694ea196657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab060c606736697ff17be7504019adf3f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_registo.html#ab060c606736697ff17be7504019adf3f">getInformacao</a> () const</td></tr>
+<tr class="separator:ab060c606736697ff17be7504019adf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d4ce2f7e25614391d1bbe2750fafaaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_registo.html#a3d4ce2f7e25614391d1bbe2750fafaaf">alterarCartao</a> (<a class="el" href="class_cartao.html">Cartao</a> *c)</td></tr>
 <tr class="separator:a3d4ce2f7e25614391d1bbe2750fafaaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9b651f188464cbc0cb7846d48e2914b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_registo.html#ac9b651f188464cbc0cb7846d48e2914b">getInformacao</a> ()</td></tr>
-<tr class="separator:ac9b651f188464cbc0cb7846d48e2914b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -131,6 +137,12 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Construtor: <br />
+*c -&gt; Objeto da class <a class="el" href="class_cartao.html">Cartao</a>, tipo de subscricao <br />
+nome -&gt; Nome do passageiro <br />
+profissao -&gt; Profissao do passageiro <br />
+datanasc -&gt; struct (int dia, int mes, int ano), recebe a data de nascimento <br />
+</p>
 
 </div>
 </div>
@@ -150,23 +162,80 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Altera o tipo de subscricao do passageiro <br />
+*c -&gt; Objeto da class <a class="el" href="class_cartao.html">Cartao</a>, tipo de subscricao para qual alterar </p>
 
 </div>
 </div>
-<a id="ac9b651f188464cbc0cb7846d48e2914b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9b651f188464cbc0cb7846d48e2914b">&#9670;&nbsp;</a></span>getInformacao()</h2>
+<a id="ac1fca826ae5de2a5a1c32694ea196657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1fca826ae5de2a5a1c32694ea196657">&#9670;&nbsp;</a></span>getDatanascimento()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Registo::getInformacao </td>
+          <td class="memname"><a class="el" href="structdatas.html">datas</a> Registo::getDatanascimento </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Retorna a data de nascimento do passageiro </p>
+
+</div>
+</div>
+<a id="ab060c606736697ff17be7504019adf3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab060c606736697ff17be7504019adf3f">&#9670;&nbsp;</a></span>getInformacao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Registo::getInformacao </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retorna toda a informacao do passageiro </p>
+
+</div>
+</div>
+<a id="a7302a5c59866e8e008b1bb1e47511b94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7302a5c59866e8e008b1bb1e47511b94">&#9670;&nbsp;</a></span>getNome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Registo::getNome </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retorna o nome do passageiro </p>
+
+</div>
+</div>
+<a id="a218c39c55b2e8f6d546dd3ff45687f6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a218c39c55b2e8f6d546dd3ff45687f6f">&#9670;&nbsp;</a></span>getProfissao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Registo::getProfissao </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retorna a profissao do passageiro </p>
 
 </div>
 </div>

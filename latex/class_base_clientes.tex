@@ -1,0 +1,102 @@
+\hypertarget{class_base_clientes}{}\section{Base\+Clientes Class Reference}
+\label{class_base_clientes}\index{Base\+Clientes@{Base\+Clientes}}
+
+
+{\ttfamily \#include $<$cartao.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_base_clientes_ad9f54e6c07cd4df57125dce94881b754}{adiciona\+Registo}} (\mbox{\hyperlink{class_registo}{Registo}} r1)
+\item 
+std\+::string \mbox{\hyperlink{class_base_clientes_a15d398aef3b426df9f0a76602ebfc1bc}{get\+Nome}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_base_clientes_a48f26cf2050fb9081cb3e3af649b2a69}{get\+Profissao}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_base_clientes_a26bfebe87514243d8f7d54296202ea83}{get\+Informacao}} () const
+\item 
+\mbox{\hyperlink{structdatas}{datas}} \mbox{\hyperlink{class_base_clientes_af5f1851e06f265c81ea5e8972dd3fc29}{get\+Data\+Nascimento}} () const
+\item 
+void \mbox{\hyperlink{class_base_clientes_addf94bea5b7b66371ff58f34c0655fd7}{set\+Id}} (int \mbox{\hyperlink{class_base_clientes_ab33dc8c88fd409fb2c6405e4487397f5}{id}})
+\item 
+int \mbox{\hyperlink{class_base_clientes_a890a2929f2f11f7ba7a1d412e1754747}{get\+Num\+Registos}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_registo}{Registo}} $>$ \mbox{\hyperlink{class_base_clientes_a8a4ee86b51d7dbd180738619163879fe}{regs}}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_base_clientes_ab33dc8c88fd409fb2c6405e4487397f5}{id}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_base_clientes_ad9f54e6c07cd4df57125dce94881b754}\label{class_base_clientes_ad9f54e6c07cd4df57125dce94881b754}} 
+\index{Base\+Clientes@{Base\+Clientes}!adiciona\+Registo@{adiciona\+Registo}}
+\index{adiciona\+Registo@{adiciona\+Registo}!Base\+Clientes@{Base\+Clientes}}
+\subsubsection{\texorpdfstring{adiciona\+Registo()}{adicionaRegisto()}}
+{\footnotesize\ttfamily void Base\+Clientes\+::adiciona\+Registo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_registo}{Registo}}}]{r1 }\end{DoxyParamCaption})}
+
+Adiciona registos ao vector(regs) de clientes ~\newline
+r1 -\/$>$ objecto temporario da class registo, registo a adicionar a base de clientes \mbox{\Hypertarget{class_base_clientes_af5f1851e06f265c81ea5e8972dd3fc29}\label{class_base_clientes_af5f1851e06f265c81ea5e8972dd3fc29}} 
+\index{Base\+Clientes@{Base\+Clientes}!get\+Data\+Nascimento@{get\+Data\+Nascimento}}
+\index{get\+Data\+Nascimento@{get\+Data\+Nascimento}!Base\+Clientes@{Base\+Clientes}}
+\subsubsection{\texorpdfstring{get\+Data\+Nascimento()}{getDataNascimento()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdatas}{datas}} Base\+Clientes\+::get\+Data\+Nascimento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna a data de nascimento de um passageiro especifico \mbox{\Hypertarget{class_base_clientes_a26bfebe87514243d8f7d54296202ea83}\label{class_base_clientes_a26bfebe87514243d8f7d54296202ea83}} 
+\index{Base\+Clientes@{Base\+Clientes}!get\+Informacao@{get\+Informacao}}
+\index{get\+Informacao@{get\+Informacao}!Base\+Clientes@{Base\+Clientes}}
+\subsubsection{\texorpdfstring{get\+Informacao()}{getInformacao()}}
+{\footnotesize\ttfamily string Base\+Clientes\+::get\+Informacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna toda a informacao de um passageiro especifico \mbox{\Hypertarget{class_base_clientes_a15d398aef3b426df9f0a76602ebfc1bc}\label{class_base_clientes_a15d398aef3b426df9f0a76602ebfc1bc}} 
+\index{Base\+Clientes@{Base\+Clientes}!get\+Nome@{get\+Nome}}
+\index{get\+Nome@{get\+Nome}!Base\+Clientes@{Base\+Clientes}}
+\subsubsection{\texorpdfstring{get\+Nome()}{getNome()}}
+{\footnotesize\ttfamily string Base\+Clientes\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o nome de um passageiro especifico \mbox{\Hypertarget{class_base_clientes_a890a2929f2f11f7ba7a1d412e1754747}\label{class_base_clientes_a890a2929f2f11f7ba7a1d412e1754747}} 
+\index{Base\+Clientes@{Base\+Clientes}!get\+Num\+Registos@{get\+Num\+Registos}}
+\index{get\+Num\+Registos@{get\+Num\+Registos}!Base\+Clientes@{Base\+Clientes}}
+\subsubsection{\texorpdfstring{get\+Num\+Registos()}{getNumRegistos()}}
+{\footnotesize\ttfamily int Base\+Clientes\+::get\+Num\+Registos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+retorna o numero de clientes na base de dados \mbox{\Hypertarget{class_base_clientes_a48f26cf2050fb9081cb3e3af649b2a69}\label{class_base_clientes_a48f26cf2050fb9081cb3e3af649b2a69}} 
+\index{Base\+Clientes@{Base\+Clientes}!get\+Profissao@{get\+Profissao}}
+\index{get\+Profissao@{get\+Profissao}!Base\+Clientes@{Base\+Clientes}}
+\subsubsection{\texorpdfstring{get\+Profissao()}{getProfissao()}}
+{\footnotesize\ttfamily string Base\+Clientes\+::get\+Profissao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna a profissao de um passageiro especifico \mbox{\Hypertarget{class_base_clientes_addf94bea5b7b66371ff58f34c0655fd7}\label{class_base_clientes_addf94bea5b7b66371ff58f34c0655fd7}} 
+\index{Base\+Clientes@{Base\+Clientes}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!Base\+Clientes@{Base\+Clientes}}
+\subsubsection{\texorpdfstring{set\+Id()}{setId()}}
+{\footnotesize\ttfamily void Base\+Clientes\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+Altera o valor da int estatica \char`\"{}id\char`\"{}, esta variavel seleciona um registo do vector(regs) de clientes para utilizar ~\newline
+id -\/$>$ ID do passageiro 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_base_clientes_ab33dc8c88fd409fb2c6405e4487397f5}\label{class_base_clientes_ab33dc8c88fd409fb2c6405e4487397f5}} 
+\index{Base\+Clientes@{Base\+Clientes}!id@{id}}
+\index{id@{id}!Base\+Clientes@{Base\+Clientes}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Base\+Clientes\+::id = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_base_clientes_a8a4ee86b51d7dbd180738619163879fe}\label{class_base_clientes_a8a4ee86b51d7dbd180738619163879fe}} 
+\index{Base\+Clientes@{Base\+Clientes}!regs@{regs}}
+\index{regs@{regs}!Base\+Clientes@{Base\+Clientes}}
+\subsubsection{\texorpdfstring{regs}{regs}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_registo}{Registo}}$>$ Base\+Clientes\+::regs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{cartao_8h}{cartao.\+h}}\item 
+src/\mbox{\hyperlink{cartao_8cpp}{cartao.\+cpp}}\item 
+src/\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

@@ -7,128 +7,168 @@
 
 using namespace std;
 
-void menuSemCartao(PassageirosRegistados *r);
-void RegistoCartao (PassageirosRegistados *r);
+void menuInformacao(BaseClientes *r);
+void menuComCartao(BaseClientes *r);
+void menuSemCartao(BaseClientes *r);
+int BaseClientes::id = 0;
 
-//Menu para passageiros sem cartao
-void menuSemCartao(PassageirosRegistados *r){
+void menuInformacao(BaseClientes *r){
 
-	int menu;
+}
+void menuComCartao(BaseClientes *r){
+	unsigned int id;
+	unsigned int menu = 0;
+	datas datan;
 
-	cout << "0 - Registar Cartao" << endl;
-	cout << "1 - Comprar Bilhete" << endl;
-	cout << "2 - Devolver Bilhete" << endl;
+	cout << "ID do seu cartao: ";
+	cin >> id;
+	r->setId(id);
+	datan = r->getDataNascimento();
 
-	cin >> menu;
+	while (menu != 5){
 
+		cout << endl << "---Passageiro Com Cartao---" << endl << endl;
 
-	switch (menu){
-	case 0:
-		RegistoCartao(r);
-		break;
+		cout << "ID: " << id << endl;
+		cout << "Nome: " << r->getNome();
+		cout << "; Profissao: " << r->getProfissao();
+		cout << "; Data de Nascimento: " << datan.dia << "-" << datan.mes << "-"<<datan.ano << endl;
+
+		cout << endl << "0 - Comprar Bilhete" << endl;
+		cout << "1 - Devolver Bilhete" << endl;
+		cout << "2 - Alterar cartao subscrito" << endl;
+		cout << "3 - Remover subscricao" << endl;
+		cout << "4 - Historico de Viagens" << endl;
+		cout << "5 - Sair" << endl;
+
+		cin >> menu;
+
+		switch (menu){
+		case 0:
+
+			break;
+		case 1:
+
+			break;
+		case 2:
+
+			break;
+		case 3:
+
+			break;
+		case 4:
+
+			break;
+		default:
+			return;
+		}
+
 	}
 }
 
-//Funçao registo do cartao
-void RegistoCartao (PassageirosRegistados *r){
+void menuSemCartao(BaseClientes *r){
+	unsigned int menu = 0;
+	datas datanasc;
+	int cart;
+	string nome;
+	string profissao;
+	Cartao viagem25 ("Viagem 25",39, 0.75);
+	Cartao viagem50 ("Viagem 50",69, 0.50);
+	Cartao viagem100 ("Viagem 100", 149, 0.0);
 
-	int cartao;
-			string nome;
-			string profissao;
-			datas datanasc;
 
-			Cartao viagem25 ("Viagem 25",39, 0.75);
-			Cartao viagem50 ("Viagem 50",69, 0.50);
-			Cartao viagem100 ("Viagem 100", 149, 0.0);
+	while (menu != 5){
 
-			cout << endl << "Cartoes disponiveis:" << endl;
-			cout << endl << "1 - Viagem 25: 25% desconto em todas as viagens por 39€/mes" << endl;
-			cout << "2 - Viagem 50: 50% desconto em todas as viagens por 69€/mes" << endl;
-			cout << "3 - Viagem 100: 100% desconto em todas as viagens por 149€/mes" << endl;
-			cout << endl << "Escolher (1-3) o cartão desejado:";
-			cin >> cartao;
-			cout << endl << "Nome: ";
-			cin >> nome;
+		cout << endl << "---Passageiro sem Cartao---" << endl << endl;
+
+		cout << endl << "0 - Comprar Bilhete" << endl;
+		cout << "1 - Devolver Bilhete" << endl;
+		cout << "2 - Subscrever a um cartao" << endl;
+		cout << "5 - Sair" << endl;
+
+		cin >> menu;
+
+		switch (menu){
+		case 0:
+
+			break;
+		case 1:
+
+			break;
+		case 2:
+			cin.ignore();
+			cin.clear();
+			cout << endl << "---Subscricao de cartao---" << endl << endl;
+			cout << "Nome: ";
+			getline(cin, nome);
 			cout << endl << "Profissao: ";
-			cin >> profissao;
-			cout << endl << "Data de nascimento(formato DD MM AAAA): ";
-			cin >> datanasc.dia;
-			cin >> datanasc.mes;
-			cin >> datanasc.ano;
+			getline(cin,profissao);
+			cout << endl << "Data de Nascimento(DD MM AAAA): ";
+			cin >> datanasc.dia >> datanasc.mes >> datanasc.ano;
 
-			if (cartao == 1){
-				Registo reg (&viagem25, nome, profissao, datanasc);
-				r->adicionaRegisto(&reg);
+			cout << "Tipo de Cartao: " << endl << endl;
+			cout << "0 - Viagem 25, Custo: " << viagem25.getPreco() << "€/mes"<< ", Desconto: " << 100 - (viagem25.getDesconto() * 100) << "% por viagem"<< endl;
+			cout << "1 - Viagem 50, Custo: " << viagem50.getPreco() << "€/mes"<< ", Desconto: " << 100 - (viagem50.getDesconto() * 100) << "% por viagem"<< endl;
+			cout << "2 - Viagem 100, Custo: " << viagem100.getPreco() << "€/mes"<< ", Desconto: " <<100 - (viagem100.getDesconto() * 100) << "% por viagem"<< endl;
+			cin >> cart;
+
+			if (cart == 0){
+				Registo temp(&viagem25, nome, profissao, datanasc);
+				r->adicionaRegisto(temp);
 			}
-			else if (cartao == 2) {
-					Registo reg (&viagem50, nome, profissao, datanasc);
-					r->adicionaRegisto(&reg);
+			else if (cart == 1){
+				Registo temp(&viagem50, nome, profissao, datanasc);
+				r->adicionaRegisto(temp);
+
 			}
 			else {
-				Registo reg (&viagem100, nome, profissao, datanasc);
-				r->adicionaRegisto(&reg);
-
+				Registo temp(&viagem25, nome, profissao, datanasc);
+				r->adicionaRegisto(temp);
 			}
 
-			cout << endl << endl << "Cartao registado com o id: " << r->getNumRegistos() << endl;
-}
+			cout << endl << "Cartao registado, o seu ID e: " << r->getNumRegistos() -1 << endl;
+			return;
+		case 3:
 
+			break;
+		case 5:
+			return;
+		default:
+			return;
+		}
+	}
+}
 
 
 int main(){
 
-	/*Passageiros sao normais ou com cartao, passageiros normais so tem direito a descontos gerais e podem comprar
-	  bilhetes sem qualquer registo*/
-
-	/*Existem tres tipos de cartao "viagem 25/50/100" que dao 25/50/100% de desconto respectivamente*/
-
-	int menu = 10;
-	PassageirosRegistados r;
+	unsigned int menu = 0;
+	BaseClientes r;
 
 
+	while (menu != 5){
 
+		cout << endl << "---MENU INICIAL---" << endl << endl;
+		cout << "0 - Informacao" << endl;
+		cout << "1 - Passageiro sem cartao" << endl;
+		cout << "2 - Passageiro com cartao" << endl;
+		cout << "5 - Sair" << endl;
 
-
-	while (menu !=5){
-
-		cout << "0 - Passageiros sem Cartao" << endl;
-		cout << "5 - Fechar aplicacao" << endl;
 		cin >> menu;
+
 		switch (menu){
 		case 0:
+			menuInformacao(&r);
+			break;
+		case 1:
 			menuSemCartao(&r);
 			break;
+		case 2:
+			menuComCartao(&r);
+			break;
+		default:
+			return 0;
 		}
 	}
-
-	/*Para adquirir um cartao o passageiro tem que efectuar um registo com varios dados pessoais: cartao escolhido, nome,
-	  profissao, data de nascimento etc, no cartao vai ficar tambem registo as viagens efectuadas*/
-	/*dataf teste;
-	teste.dia = 5;
-	teste.mes = 5;
-	teste.ano = 5;
-	Registo pessoaAleatoria(&viagem25, "nome", "trabalho", teste);*/
-
-	/*Os comboios sao de dois tipos Alfa Pendular e Intercidades*/
-	//AlfaPendular A1 (60);
-	//Intercidades I1(100);
-
-	/*E pedido para mostrar todos os comboios que existem e a sua informacao, lotaçao, etc*/
-	/*Frota f1;
-	f1.adicionaAlfa(&A1);
-	f1.adicionaInter(&I1);*/
-
-	/*As Viagens tem que ter um comboio associado e terao que ter um preco base,
-	  calculado por distancia ou dado manualmente?*/
-
-
-	/*Finalmente a bilheteira poe uma viagem disponivel a certo hora e dia, e permite passageiros com ou sem cartao
-	  comprarem e devolverem bilhetes*/
-
-	/*Um desconto geral de 70% no valor base tem que ser aplicado caso menos de 50% dos lugares estiverem vendidos
-	  48 horas antes da partida*/
-
-	/*A informaçao depois deve ter que ser guardada (e lida) num ficheiro de texto para evitar toda a informacao
-	  ser perdida cada vez que se fecha o programa*/
-
+	return 0;
 }

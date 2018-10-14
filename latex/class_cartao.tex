@@ -13,6 +13,8 @@ float \mbox{\hyperlink{class_cartao_a3b2aebc6843c561c862f2efe7ff02115}{get\+Prec
 \item 
 float \mbox{\hyperlink{class_cartao_a853d214e1f98f1f49c364b75942ab1c4}{get\+Desconto}} () const
 \item 
+std\+::string \mbox{\hyperlink{class_cartao_a60d369c3f5a4fe21aff1661ee7d90345}{get\+Nome}} () const
+\item 
 std\+::string \mbox{\hyperlink{class_cartao_a53a61ff5e28d5c7020fd84268dcddfb6}{get\+Informacao}} () const
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
@@ -36,7 +38,7 @@ std\+::string \mbox{\hyperlink{class_cartao_a831b64c396e3903ff85c8165640eb41a}{n
 Construtor\+: ~\newline
 nome -\/$>$ Nome do cartao ~\newline
 prc -\/$>$ Preco mensal da subscricao do cartao ~\newline
-desc -\/$>$ Desconto dado pelo cartao em todas as viagens ~\newline
+desc -\/$>$ Discount dado pelo cartao em todas as viagens ~\newline
 
 
 \subsection{Member Function Documentation}
@@ -46,19 +48,25 @@ desc -\/$>$ Desconto dado pelo cartao em todas as viagens ~\newline
 \subsubsection{\texorpdfstring{get\+Desconto()}{getDesconto()}}
 {\footnotesize\ttfamily float Cartao\+::get\+Desconto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Devolve o desconto em todas as viagens dado pelo cartao \mbox{\Hypertarget{class_cartao_a53a61ff5e28d5c7020fd84268dcddfb6}\label{class_cartao_a53a61ff5e28d5c7020fd84268dcddfb6}} 
+Retorna o desconto em todas as viagens dado pelo cartao \mbox{\Hypertarget{class_cartao_a53a61ff5e28d5c7020fd84268dcddfb6}\label{class_cartao_a53a61ff5e28d5c7020fd84268dcddfb6}} 
 \index{Cartao@{Cartao}!get\+Informacao@{get\+Informacao}}
 \index{get\+Informacao@{get\+Informacao}!Cartao@{Cartao}}
 \subsubsection{\texorpdfstring{get\+Informacao()}{getInformacao()}}
 {\footnotesize\ttfamily string Cartao\+::get\+Informacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Devolve toda a informacao relacionada com o cartao \mbox{\Hypertarget{class_cartao_a3b2aebc6843c561c862f2efe7ff02115}\label{class_cartao_a3b2aebc6843c561c862f2efe7ff02115}} 
+Retorna toda a informacao relacionada com o cartao \mbox{\Hypertarget{class_cartao_a60d369c3f5a4fe21aff1661ee7d90345}\label{class_cartao_a60d369c3f5a4fe21aff1661ee7d90345}} 
+\index{Cartao@{Cartao}!get\+Nome@{get\+Nome}}
+\index{get\+Nome@{get\+Nome}!Cartao@{Cartao}}
+\subsubsection{\texorpdfstring{get\+Nome()}{getNome()}}
+{\footnotesize\ttfamily string Cartao\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o nome do cartao usado \mbox{\Hypertarget{class_cartao_a3b2aebc6843c561c862f2efe7ff02115}\label{class_cartao_a3b2aebc6843c561c862f2efe7ff02115}} 
 \index{Cartao@{Cartao}!get\+Preco@{get\+Preco}}
 \index{get\+Preco@{get\+Preco}!Cartao@{Cartao}}
 \subsubsection{\texorpdfstring{get\+Preco()}{getPreco()}}
 {\footnotesize\ttfamily float Cartao\+::get\+Preco (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Devolve o preco mensal do cartao 
+Retorna o preco mensal do cartao 
 
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_cartao_a9abef37fa118bed1459d3c273c79a76a}\label{class_cartao_a9abef37fa118bed1459d3c273c79a76a}} 
